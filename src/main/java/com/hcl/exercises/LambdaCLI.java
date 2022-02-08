@@ -13,7 +13,7 @@ public class LambdaCLI {
     	*/
     	System.out.println("Java Lambdas: ");
     	
-    	DetermineCalc c1 = (a, b) -> (a % 2 == 0 && b % 2 == 0) ? a + b : a - b;
+    	DetermineCalc c1 = (a, b) -> (a % 2 == 0 && b % 2 == 0) ? a + b : a - b; // lambda function
     	
     	System.out.println("Two Even Numbers 4 and 6: " + c1.addSubtract(4, 6));
     	System.out.println("One Even One Odd 10 and 5: " + c1.addSubtract(10, 5));
@@ -22,6 +22,6 @@ public class LambdaCLI {
 }
 
 @FunctionalInterface
-interface DetermineCalc {
+interface DetermineCalc {         // functional interface
 	int addSubtract(int a, int b);
 }

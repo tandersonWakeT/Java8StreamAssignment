@@ -2,7 +2,9 @@ package com.hcl.exercises;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Arrays;
 
+import com.hcl.entity.Person;
 /*
  * Puts into practice a simple method reference
  * 
@@ -19,34 +21,22 @@ public class MethodRefCLI {
 		p1.add(new Person(24, "Juliet"));
 		
 		
-		
-		p1.forEach(System.out::println);
+		// method reference
+		p1.forEach(System.out::println); // method reference
 		
 		// accomplishes the same thing as above but as a lambda
 		//p1.forEach(p -> System.out.println(p));
 		
+		System.out.println("Sorting the names: ");
+		String[] nameArray = new String[5];
+		for (int i = 0; i < p1.size(); i++) {
+			nameArray[i] = p1.get(i).getName();
+		}
+		Arrays.sort(nameArray, String::compareTo); // method reference
+		for (String name : nameArray) {
+			System.out.println(name);
+		}
 	}
 }
 
-class Person {
-	
-	private int age;
-	private String name;
-	
-	public Person(int age, String name) {
-		this.age = age;
-		this.name = name;
-	}
-	
-	public int getAge() {
-		return this.age;
-	}
-	
-	public String getName() {
-		return this.name;
-	}
-	
-	public String toString() {
-		return "Name: " + this.name + "\nAge: " + this.age + "\n";
-	}
-}
+
