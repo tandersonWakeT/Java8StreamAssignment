@@ -15,4 +15,5 @@ Two Assignments:
 	
 2. Java program with and without Stream API filtering Employee attributes such as 
 	Salary, Name starting letter, and Age.
-	-The name for program 2 is EmployeeFilterCLI.java located in com.hcl.exercises
+	
+	- The name for program 2 is EmployeeFilterCLI.java located in com.hcl.exercises

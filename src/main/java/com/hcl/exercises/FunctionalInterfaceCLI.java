@@ -6,6 +6,8 @@ import com.hcl.entity.Person;
  * Puts into practice a single method from a Functional Interface
  * The method 'call' is implemented by the Person class
  * 
+ * 
+ * Utilizes the: RequestAssistance functional interface
  */
 public class FunctionalInterfaceCLI {
 	
